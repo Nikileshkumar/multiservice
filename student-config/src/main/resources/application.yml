@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: CONFIG-SERVER
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Nikileshkumar/configRepo
+          clone-on-start: true
+
+server:
+  port: 8888
