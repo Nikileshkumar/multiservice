@@ -1,14 +1,16 @@
 spring:
   application:
     name: CONFIG-SERVER
-  profiles:
-    active: native
   cloud:
     config:
       server:
         git:
           uri: https://github.com/Nikileshkumar/configRepo
-          clone-on-start: true
 
 server:
   port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka_host:localhost}:8761/eureka/
